@@ -1,3 +1,4 @@
+//interfaz de los corredores
 interface Icorredor{
     id:number,
     name:string,

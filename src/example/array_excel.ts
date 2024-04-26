@@ -1,3 +1,4 @@
+//interpretacion del array de los que se proporcion del excel (opcional)
 interface Ientity{
     Entidad:String
 }

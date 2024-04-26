@@ -1,3 +1,4 @@
+//interfaz de las carreras que por defecto seria solo una que esta enlazada aparte por la importacion de la interfaz de Icorredor y Icarrera
 import {Icarrer,carreras} from "./carrera"
 import {Icorredor,corredores} from "./Corredor"
 

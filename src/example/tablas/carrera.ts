@@ -1,3 +1,4 @@
+//interfaz paras carreras
 interface Icarrer{
     id:number,
     name: string,
