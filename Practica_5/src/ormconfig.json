@@ -1,0 +1,10 @@
+{
+    "type": "mongodb",
+    "host": "localhost",
+    "port": 27017,
+    "database": "tu_base_de_datos",
+    "synchronize": true,
+    "useUnifiedTopology": true,
+    "entities": ["src/domain/entities/*.ts"]
+  }
+  
