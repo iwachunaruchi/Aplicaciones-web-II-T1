@@ -1,0 +1,80 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Corredor {
+  id: ID!
+  nombre: String!
+  peso: Float!
+  altura: Float!
+  edad: Float!
+  estado: Estado!
+}
+
+enum Estado {
+  Activo
+  Pendiente
+  Eliminado
+}
+
+type Carrera {
+  id: ID!
+  nombreCarrera: String!
+  kilometros: Float!
+  detalles: String!
+  fecha: String!
+  hora: String!
+  estado: Estado!
+}
+
+type Follow {
+  id: ID!
+  corredor: Corredor!
+  carrera: Carrera!
+  tiempoLlegada: Float!
+  ordenLlegada: Float!
+  pulsoInicial: Float!
+  pulsoFinal: Float!
+  estado: Estado!
+}
+
+type Query {
+  corredores: [Corredor!]!
+  carreras: [Carrera!]!
+  carrera(id: String!): Carrera!
+  follows: [Follow!]!
+}
+
+type Mutation {
+  createCorredor(createCorredorInput: CreateCorredorDto!): Corredor!
+  createCarrera(createCarreraDto: CreateCarreraDto!): Carrera!
+  removeCarrera(id: String!): Carrera!
+  createFollow(createFollowInput: CreateFollowDto!): Follow!
+}
+
+input CreateCorredorDto {
+  nombre: String!
+  peso: Float!
+  altura: Float!
+  edad: Float!
+  estado: Estado!
+}
+
+input CreateCarreraDto {
+  nombreCarrera: String!
+  kilometros: Float!
+  detalles: String!
+  fecha: String!
+  hora: String!
+  estado: Estado!
+}
+
+input CreateFollowDto {
+  corredorId: ID!
+  carreraId: ID!
+  tiempoLlegada: Float!
+  ordenLlegada: Float!
+  pulsoInicial: Float!
+  pulsoFinal: Float!
+  estado: Estado!
+}
